@@ -1,4 +1,4 @@
-*DEVELOPMENT NOTES
+*DEVELOPMENT NOTES*
 
   - Fill in appropriate db configurations.
   - Fill in appropriate template directory locations
