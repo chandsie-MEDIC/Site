@@ -6,6 +6,6 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^MEDIC/admin/', include(admin.site.urls)),
-    #url(r'^MEDIC/', include('registry.urls')),
+    url(r'^MEDIC/', include('registry.urls')),
     
 )
