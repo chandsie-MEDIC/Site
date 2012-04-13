@@ -109,9 +109,7 @@ ROOT_URLCONF = 'medic_site.urls'
 WSGI_APPLICATION = 'medic_site.wsgi.application'
 
 TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
+    '/home/shreyas/workspace/chands279/MEDIC-Site/templates'
 )
 
 INSTALLED_APPS = (
