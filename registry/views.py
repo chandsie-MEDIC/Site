@@ -10,7 +10,7 @@ def auth(request):
     response = 'False'
     if request.method == 'POST':
         u = authenticate(username = request.POST['username'], password = request.POST['password'])
-        if u is not None: 
+        if u is not None and not u.is_staff: 
             response = 'Dr. ' + u.get_full_name()
           
     return HttpResponse(response)
