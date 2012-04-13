@@ -1,4 +1,5 @@
 from django.contrib.auth import authenticate
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, render_to_response
@@ -15,6 +16,7 @@ def auth(request):
           
     return HttpResponse(response)
 
+@login_required
 def detail(request, username):
     user = get_object_or_404(User, username=username)
     n = user.get_full_name()

@@ -23,6 +23,9 @@ DATABASES = {
 #Custom user profile that is tagged with each user model specified in <app>.<modelname> format
 AUTH_PROFILE_MODULE = 'registry.UserProfile'
 
+LOGIN_URL = '/MEDIC/login'
+LOGOUT_URL = '/MEDIC/logout'
+
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
