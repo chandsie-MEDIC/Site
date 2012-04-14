@@ -5,6 +5,7 @@ from django.http import HttpResponse, Http404
 from django.shortcuts import render_to_response, redirect
 from django.template.context import RequestContext
 from django.views.decorators.csrf import csrf_exempt
+from registry.forms import UserRegistrationForm, UserProfileRegistrationForm
 
 @csrf_exempt
 def server_auth(request):
@@ -22,7 +23,7 @@ def server_detail(request, username):
         response = 'Error'
         auth = authenticate(username=request.POST['username'], password=request.POST['password'])
         if auth is not None and auth.is_staff: 
-            user = User.objects.get(username = username)
+            user = User.objects.get(username=username)
             profile = user.get_profile()
             response = 'Dr. ' + user.get_full_name() + '$';
             response += profile.specialty + '$'
@@ -42,4 +43,15 @@ def detail(request):
     return render_to_response('detail.html', {'name' : n, 'user': u, 'url' : profile.url},
                                context_instance=RequestContext(request))
     
-    
+def register(request):
+    if request.method == 'POST':
+        userForm = UserRegistrationForm(request.POST)
+        userProfileForm = UserProfileRegistrationForm(request.POST)
+        if userForm.is_valid() and userProfileForm.is_valid():
+            return HttpResponse('Works')
+    else:
+        userForm = UserRegistrationForm()
+        userProfileForm = UserProfileRegistrationForm()
+    return render_to_response('register.html', 
+                              {'userForm': userForm, 'userProfileForm' : userProfileForm},
+                              context_instance=RequestContext(request))
