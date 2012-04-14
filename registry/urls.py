@@ -10,6 +10,7 @@ urlpatterns = patterns('registry.views',
 
 urlpatterns += patterns('',
     url(r'^$', direct_to_template, {'template': 'home.html'}),
+    url(r'^more/$', direct_to_template, {'template': 'more.html'}),
     url(r'^success/$', direct_to_template, {'template': 'success.html'}),
     url(r'^login/$', 'django.contrib.auth.views.login', {'template_name': 'login.html'}),
     url(r'^logout/$', 'django.contrib.auth.views.logout', {'template_name': 'logout.html'}),
