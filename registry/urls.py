@@ -4,9 +4,9 @@ from django.views.generic.simple import direct_to_template
 urlpatterns = patterns('registry.views',
 #    url(r'^register/$', 'register'),
     
-#    url(r'^user/(?P<username>\w+)/$', 'detail'),
+    url(r'^user/(?P<username>\w+)/$', 'server_detail'),
     url(r'^user/$', 'detail'),
-    url(r'^auth/$', 'auth'),
+    url(r'^auth/$', 'server_auth'),
 )
 
 urlpatterns += patterns('',

@@ -1,20 +1,37 @@
 from django.contrib.auth import authenticate
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponse
+from django.contrib.auth.models import User
+from django.http import HttpResponse, Http404
 from django.shortcuts import render_to_response, redirect
 from django.template.context import RequestContext
 from django.views.decorators.csrf import csrf_exempt
 
 @csrf_exempt
-def auth(request):
-    response = 'False'
+def server_auth(request):
     if request.method == 'POST':
+        response = 'Error'
         u = authenticate(username=request.POST['username'], password=request.POST['password'])
         if u is not None and not u.is_staff: 
             response = 'Dr. ' + u.get_full_name()
-          
-    return HttpResponse(response)
+        return HttpResponse(response)
+    raise Http404
 
+@csrf_exempt
+def server_detail(request, username):
+    if request.method == 'POST':
+        response = 'Error'
+        auth = authenticate(username=request.POST['username'], password=request.POST['password'])
+        if auth is not None and auth.is_staff: 
+            user = User.objects.get(username = username)
+            profile = user.get_profile()
+            response = 'Dr. ' + user.get_full_name() + '$';
+            response += profile.specialty + '$'
+            response += profile.url + '$'
+            response += profile.address + '$'
+            response += profile.phone_number + '$'
+        return HttpResponse(response)
+    raise Http404
+    
 @login_required
 def detail(request):
     if request.user.is_staff:
