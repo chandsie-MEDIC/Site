@@ -8,7 +8,7 @@ ADMINS = (
 )
 
 MANAGERS = ADMINS
-PROJECT_ROOT = ''
+PROJECT_ROOT = '/home/shreyas/workspace/chands279/MEDIC-Site/'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
@@ -24,6 +24,7 @@ DATABASES = {
 AUTH_PROFILE_MODULE = 'registry.UserProfile'
 
 LOGIN_URL = '/MEDIC/login'
+LOGIN_REDIRECT_URL = '/MEDIC/user/'
 LOGOUT_URL = '/MEDIC/logout'
 
 # Local time zone for this installation. Choices can be found here:
