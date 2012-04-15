@@ -8,7 +8,7 @@ ADMINS = (
 )
 
 MANAGERS = ADMINS
-PROJECT_ROOT = '/home/shreyas/workspace/chands279/MEDIC-Site/'
+PROJECT_ROOT = 'D:/Workspaces/MEDIC-Site/'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
@@ -23,9 +23,9 @@ DATABASES = {
 #Custom user profile that is tagged with each user model specified in <app>.<modelname> format
 AUTH_PROFILE_MODULE = 'registry.UserProfile'
 
-LOGIN_URL = '/MEDIC/login'
-LOGIN_REDIRECT_URL = '/MEDIC/user/'
-LOGOUT_URL = '/MEDIC/logout'
+LOGIN_URL = '/login'
+LOGIN_REDIRECT_URL = '/user/'
+LOGOUT_URL = '/logout'
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name

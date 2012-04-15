@@ -37,7 +37,7 @@ def server_detail(request, username):
 @login_required
 def detail(request, new_user = False):
     if request.user.is_staff:
-        return redirect('/MEDIC/admin')
+        return redirect('/admin')
     n = request.user.get_full_name()
     profile = request.user.get_profile()
     u = [profile.specialty, profile.address, profile.phone_number, ]
@@ -56,7 +56,7 @@ def register(request):
             userProfile = userProfileForm.save(commit=False)
             userProfile.user = user
             userProfile.save()
-            return redirect('/MEDIC/success/')
+            return redirect('/success/')
     else:
         userForm = UserRegistrationForm()
         userProfileForm = UserProfileRegistrationForm()
