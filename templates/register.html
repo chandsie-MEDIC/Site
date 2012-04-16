@@ -1,13 +1,14 @@
 {% extends "base.html" %}
 {% block title %}Register{% endblock %}
 {% block content %}
+<div class="centered">
 	<form method="post" action="/register/">
 	{% csrf_token %}
-	<table border = "1" >
+	<table border = "1" class="centered" >
 	{{userForm.as_table}}
 	{{userProfileForm.as_table}}
 	<tr><td colspan = 2><input type="submit" value="Submit" /></td></tr>
 	</table>
-	
 	</form>
+</div>
 {% endblock %}

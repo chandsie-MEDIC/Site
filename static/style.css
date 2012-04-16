@@ -13,7 +13,20 @@ html {
 }
 
 body {
-	width: 100%m
+	width: 100%;
+	margin: 0 auto;
+}
+
+.centered {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table.centered {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #header {
@@ -28,32 +41,10 @@ body {
 	overflow: hidden
 }
 
-.logo {
-	float: left;
-	margin: 0 38px 0 41px;
-}
-
 .vlinks {
 	position: relative;
 	padding-top: 20px;
 	text-align: center;
-}
-
-.slogan {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 10px;
-	text-transform: uppercase;
-	color: #82837F;
-	line-height: 30px;
-	border-left: 1px solid #82837F;
-	padding: 0 0 0 21px;
-	margin: 40px 0 0 0;
-	float: left
-}
-
-.rss {
-	float: right;
-	margin: 29px 52px 0 0
 }
 
 #menu {
@@ -97,9 +88,7 @@ body {
 	left: 0;
 	z-index: 1
 }
-
-.rblock {
-	background-image: url('/media/images/block1.jpg');
+.rblock, .lblock, .mblock, .dablock, .pablock, .dblock {
 	background-position: top left;
 	background-repeat: no-repeat;
 	width: 165px;
@@ -107,61 +96,29 @@ body {
 	float: left;
 	padding: 30px 0 0 130px;
 	position: relative;
+}
+
+.rblock {
+	background-image: url('/media/images/block1.jpg');
 }
 
 .lblock {
 	background-image: url('/media/images/block2.jpg');
-	background-position: top left;
-	background-repeat: no-repeat;
-	width: 165px;
-	height: 118px;
-	float: left;
-	padding: 30px 0 0 130px;
-	position: relative;
 }
 
 .mblock {
 	background-image: url('/media/images/block3.jpg');
-	background-position: top left;
-	background-repeat: no-repeat;
-	width: 165px;
-	height: 118px;
-	float: left;
-	padding: 30px 0 0 130px;
-	position: relative;
 }
-
 .dablock {
 	background-image: url('/media/images/block4.jpg');
-	background-position: top left;
-	background-repeat: no-repeat;
-	width: 165px;
-	height: 118px;
-	float: left;
-	padding: 30px 0 0 130px;
-	position: relative;
 }
 
 .pablock {
 	background-image: url('/media/images/block5.jpg');
-	background-position: top left;
-	background-repeat: no-repeat;
-	width: 165px;
-	height: 118px;
-	float: left;
-	padding: 30px 0 0 130px;
-	position: relative;
 }
 
 .dblock {
 	background-image: url('/media/images/block6.jpg');
-	background-position: top left;
-	background-repeat: no-repeat;
-	width: 165px;
-	height: 118px;
-	float: left;
-	padding: 30px 0 0 130px;
-	position: relative;
 }
 
 #blocks h3 {
@@ -187,85 +144,6 @@ body {
 	border-bottom: 1px solid #fff;
 }
 
-.column {
-	padding: 0 60px 0 37px;
-	width: 410px;
-	font-family: Tahoma;
-	font-size: 11px;
-	color: #64584C;
-	line-height: 17px;
-	float: left;
-}
-
-.column h3 {
-	background-image: url('/media/images/bullet.gif');
-	background-position: left 2px;
-	background-repeat: no-repeat;
-	padding: 3px 0 37px 28px;
-	font-family: Arial;
-	font-size: 18px;
-	color: #64584C;
-	font-weight: normal;
-}
-
-.news_block h3 {
-	background-image: url('/media/images/bullet.gif');
-	background-position: left 2px;
-	background-repeat: no-repeat;
-	padding: 0 0 37px 28px;
-	font-family: Arial;
-	font-size: 18px;
-	color: #64584C;
-	font-weight: normal;
-}
-
-.text {
-	font-size: 14px;
-	color: #677D2A;
-	line-height: 20px;
-	padding: 22px 0 8px 0
-}
-
-.right {
-	text-align: right;
-	padding: 25px 0 0 0;
-}
-
-.right2 {
-	width: 430px;
-	float: left;
-	text-align: right;
-	padding: 25px 0 0 0;
-}
-
-.news_block {
-	width: 425px;
-	float: left;
-	font-family: Tahoma;
-	font-size: 11px;
-	color: #64584C;
-}
-
-.news_block span {
-	display: block;
-	float: left;
-	color: #FF8400;
-	font-weight: bold;
-	text-align: right;
-	width: 77px;
-}
-
-.news_block li {
-	list-style-type: none;
-}
-
-.news_block p {
-	display: block;
-	float: left;
-	width: 310px;
-	padding: 0 0 23px 8px;
-}
-
 #footer {
 	background-color: #E4DEDA;
 	width: 100%;
@@ -275,34 +153,4 @@ body {
 	color: #64584C;
 	text-transform: uppercase;
 	text-align: right
-}
-
-#footer a {
-	color: #64584C;
-	text-decoration: none
-}
-
-#footer a:visited {
-	text-decoration: none
-}
-
-#footer a:hover {
-	text-decoration: underline
-}
-
-#footer p {
-	line-height: 90px;
-	padding: 0 48px 0 0
-}
-
-#content .inner_copy {
-	border: 0;
-	color: #f00;
-	float: left;
-	width: 50% !important;
-	margin: -202px 0 0 0;
-	overflow: hidden;
-	line-height: 0;
-	padding: 0;
-	font-size: 12px
 }
