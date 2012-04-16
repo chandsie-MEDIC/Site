@@ -1,34 +1,6 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<title>MEDIC: More</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<link rel="stylesheet" type="text/css" href="/static/style.css" />
-</head>
-
-<body>
-	<div id="header">
-		<div id="menu">
-			<ul>
-				<li><a href="#"><img src="/media/images/but1.gif" alt=""
-						width="148" height="40" /></a></li>
-				<li><a href="#"><img src="/media/images/but2.gif" alt=""
-						width="146" height="40" /></a></li>
-				<li><a href="#"><img src="/media/images/but3.gif" alt=""
-						width="146" height="40" /></a></li>
-				<li><a href="#"><img src="/media/images/but4.gif" alt=""
-						width="146" height="40" /></a></li>
-				<li><a href="#"><img src="/media/images/but5.gif" alt=""
-						width="146" height="40" /></a></li>
-				<li><a href="#"><img src="/media/images/but6.gif" alt=""
-						width="147" height="39" /></a></li>
-			</ul>
-		</div>
-		<img src="/media/images/picture.jpg" alt="" width="980" height="333"
-			class="pic" />
-	</div>
-	<div id="blocks">
+{% extends "base.html" %}
+{% block title %}More Info{% endblock %}
+{% block content %}
 		<div class="inside">
 			<div class="dablock">
 				<a href='#'><span class="blocklink"></span></a>
@@ -46,12 +18,4 @@
 	</div>
 	<font size="5">MEDIC is a medical multi tool consisting of instruments commonly used by doctors, such as the stethoscope and thermometer. It interfaces with smart phones to enable sharing of patients' vitals over long distances. This allows anyone to access medical expertise when they are unable to reach such expertise due to location or situation.</font>
 	<font size="5">It is run on the Android platform.</font>
-	<div id="footer">
-		<div class="inside">
-			<div class="vlinks">
-				&copy; 2012. Bri Mussman. Shreyas Chand.
-			</div>
-		</div>
-	</div>
-</body>
-</html>
+{% endblock %}

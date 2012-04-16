@@ -1,34 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>MEDIC: Login</title>
-<link rel="stylesheet" type="text/css" href="/static/style.css" />
-</head>
-<body>
-
-<div id="header">
-		<div id="menu">
-			<ul>
-				<li><a href="#"><img src="/media/images/but1.gif" alt=""
-						width="148" height="40" /></a></li>
-				<li><a href="#"><img src="/media/images/but2.gif" alt=""
-						width="146" height="40" /></a></li>
-				<li><a href="#"><img src="/media/images/but3.gif" alt=""
-						width="146" height="40" /></a></li>
-				<li><a href="#"><img src="/media/images/but4.gif" alt=""
-						width="146" height="40" /></a></li>
-				<li><a href="#"><img src="/media/images/but5.gif" alt=""
-						width="146" height="40" /></a></li>
-				<li><a href="#"><img src="/media/images/but6.gif" alt=""
-						width="147" height="39" /></a></li>
-			</ul>
-		</div>
-		<img src="/media/images/picture.jpg" alt="" width="980" height="333"
-			class="pic" />
-	</div>
-
-<div id="login">
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block content %}
 {% if form.errors %}
 <p>Your username and password didn't match. Please try again.</p>
 {% endif %}
@@ -50,6 +22,4 @@
 <input type="submit" value="login" />
 <input type="hidden" name="next" value="{{ next }}" />
 </form>
-
-</body>
-</html>
+{% endblock %}
