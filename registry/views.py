@@ -27,10 +27,10 @@ def server_detail(request, username):
             if not user.is_staff: 
                 profile = user.get_profile()
                 response = 'Dr. ' + user.get_full_name() + '$';
-                response += profile.specialty + '$'
-                response += profile.url + '$'
-                response += profile.address + '$'
-                response += profile.phone_number + '$'
+                response += profile.specialty #+ '$'
+#                response += profile.url + '$'
+#                response += profile.address + '$'
+#                response += profile.phone_number + '$'
         return HttpResponse(response)
     raise Http404
     
