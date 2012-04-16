@@ -143,7 +143,7 @@ body {
 }
 
 .pablock {
-	background-image: url('../media/images/block5.jpg');
+	background-image: url('/media/images/block5.jpg');
 	background-position: top left;
 	background-repeat: no-repeat;
 	width: 165px;
@@ -154,7 +154,7 @@ body {
 }
 
 .dblock {
-	background-image: url('../media/images/block6.jpg');
+	background-image: url('/media/images/block6.jpg');
 	background-position: top left;
 	background-repeat: no-repeat;
 	width: 165px;
