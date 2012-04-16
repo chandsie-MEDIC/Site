@@ -13,7 +13,7 @@ html {
 }
 
 body {
-	width: 100%
+	width: 100%m
 }
 
 #header {
@@ -122,6 +122,39 @@ body {
 
 .mblock {
 	background-image: url('/media/images/block3.jpg');
+	background-position: top left;
+	background-repeat: no-repeat;
+	width: 165px;
+	height: 118px;
+	float: left;
+	padding: 30px 0 0 130px;
+	position: relative;
+}
+
+.dablock {
+	background-image: url('/media/images/block4.jpg');
+	background-position: top left;
+	background-repeat: no-repeat;
+	width: 165px;
+	height: 118px;
+	float: left;
+	padding: 30px 0 0 130px;
+	position: relative;
+}
+
+.pablock {
+	background-image: url('../media/images/block5.jpg');
+	background-position: top left;
+	background-repeat: no-repeat;
+	width: 165px;
+	height: 118px;
+	float: left;
+	padding: 30px 0 0 130px;
+	position: relative;
+}
+
+.dblock {
+	background-image: url('../media/images/block6.jpg');
 	background-position: top left;
 	background-repeat: no-repeat;
 	width: 165px;
